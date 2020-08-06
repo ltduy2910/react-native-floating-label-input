@@ -61,6 +61,7 @@ interface Props extends TextInputProps {
   };
   /**Required if onFocus or onBlur is overrided*/
   isFocused: boolean;
+  isShowPassword: boolean;
   /**Ref to FloatingLabelInput*/
 }
 
@@ -205,7 +206,7 @@ const FloatingLabelInput: React.RefForwardingComponent<InputRef, Props> = (
           {...props}
           placeholder=""
         />
-        {props.isPassword ? (
+        {props.isPassword && props.isShowPassword ? (
           <TouchableOpacity style={toggleButton} onPress={_toggleVisibility}>
             <Image
               source={
