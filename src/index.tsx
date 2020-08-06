@@ -206,7 +206,7 @@ const FloatingLabelInput: React.RefForwardingComponent<InputRef, Props> = (
           {...props}
           placeholder=""
         />
-        {props.isPassword && props.isShowPassword ? (
+        {props.isPassword && props.isShowPassword && (
           <TouchableOpacity style={toggleButton} onPress={_toggleVisibility}>
             <Image
               source={
@@ -218,8 +218,6 @@ const FloatingLabelInput: React.RefForwardingComponent<InputRef, Props> = (
               style={img}
             />
           </TouchableOpacity>
-        ) : (
-          <View />
         )}
       </View>
     </View>
